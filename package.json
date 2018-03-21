@@ -13,12 +13,12 @@
   "author": "Tommy Dronkers <tommy@snappyjs.com> (https://www.snappyjs.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/snappyjs/node-promise-serial/issues",
+    "url": "https://github.com/snappyjs/node-promise-parallel/issues",
     "email": "tommy@snappyjs.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snappyjs/node-promise-serial.git"
+    "url": "https://github.com/snappyjs/node-promise-parallel.git"
   },
   "devDependencies": {
     "chai": "^4.1.2",
