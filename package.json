@@ -1,27 +1,25 @@
 {
-  "name": "node-promise-parallel",
-  "version": "1.0.0",
-  "description": "A utility class to execute promises in parallel.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha test/tests.js",
-    "start": "node index.js"
-  },
-  "author": "Tommy Dronkers (https://www.snappyJS.com)",
-  "license": "MIT",
-  "homepage": "https://snappyjs.com",
-  "author": "Tommy Dronkers <tommy@snappyjs.com> (https://www.snappyjs.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/snappyjs/node-promise-parallel/issues",
-    "email": "tommy@snappyjs.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/snappyjs/node-promise-parallel.git"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.0.4"
-  }
+	"name": "node-promise-parallel",
+	"version": "1.0.0",
+	"description": "A utility class to execute promises in parallel.",
+	"main": "index.js",
+	"scripts": {
+		"test": "mocha test/tests.js",
+		"sample": "node sample/sample.js"
+	},
+	"author": "Tommy Dronkers <tommy@snappyjs.com> (https://www.snappyjs.com)",
+	"license": "MIT",
+	"homepage": "https://snappyjs.com",
+	"bugs": {
+		"url": "https://github.com/snappyjs/node-promise-parallel/issues",
+		"email": "tommy@snappyjs.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/snappyjs/node-promise-parallel.git"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"mocha": "^5.0.4"
+	}
 }
