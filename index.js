@@ -24,11 +24,12 @@ const EVENTS = {
  *
  * @extends EventEmitter
  */
-class PromisePool extends EventEmitter {
+class PromiseParallel extends EventEmitter {
 	/**
-	 * Create a new PromisePool with a set poolSize and a generator for it.
+	 * Create a new PromiseParallel with a set poolSize and a generator for it.
 	 * @param {Number} [poolSize=5] The number of concurrent promises to be run at any single time.
-	 * @param {function*} generator     A function* that should yield a promise to be added to the batch.
+	 * @param {function*} generator A function* that should yield a promise to be added to the batch.
+	 * @param {Number} [waitTime=0] the time in ms to wait before executing next promise from iterator.
 	 */
 	constructor(generator, poolSize = 5, waitTime = 0) {
 		super();
@@ -36,7 +37,7 @@ class PromisePool extends EventEmitter {
 		assert.equal(Number.isInteger(poolSize), true, 'poolSize must be of type integer (defaults to 5).');
 
 		this._poolSize = poolSize;
-		this._generator = generator();
+		this._iterator = generator();
 		this._running = 0;
 		this._stopped = false;
 		this._waitTime = waitTime;
@@ -49,7 +50,7 @@ class PromisePool extends EventEmitter {
 	 */
 	_next() {
 		if (this._stopped) return;
-		let prom = this._generator.next();
+		let prom = this._iterator.next();
 		if (!prom.done) {
 			this._running++;
 
@@ -118,4 +119,4 @@ class PromisePool extends EventEmitter {
 		return this;
 	}
 }
-module.exports = PromisePool;
+module.exports = PromiseParallel;
